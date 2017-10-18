@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">    
+        <title>ExamenFinalHTML</title>
+        <meta name="author" content="Prénom Nom" >
+        <meta name="description" content="Mettre ici un résumé descriptif du contenu de la page avec des mots-clés" >
+        <meta name="robots" content="index,follow" >
+        <link rel="shortcut icon" type="images/x-icon" href="favicon.ico" >    
+        <link rel="stylesheet" href="css/main.css" >
+        <script src="js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<!-- 		
+			commentaire conditionnel pour rendre compatible les nouvelles balises structurantes de HTML5 
+		-->
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+    <body class="bgc">
+	<h1 class="header tc"><img class="home" src="../images/tete.jpg">GALERIE</h1>
+	<div class="topnav">
+			<a href="galerie.html" target="_parent">galerie</a>
+			<a href="sources.html" target="_parent">sources</a>
+			<a href="contact.html" target="_parent">contact</a>
+			<a class="menu topnav " href="#" onclick=test() >?</a>
+			
+		</div>
+		<script>function test() {
+			alert("ceci est le travail de ahmed!")}
+		</script>
+		<h2 class="w3-center tc">Manual Slideshow</h2>
+<br><br><br><br>
+<div class="w3-content w3-display-container tc">
+  <img class="mySlides" src="../images/slide/image11.jpg" style="width:100%">
+  <img class="mySlides" src="../images/slide/image22.jpg" style="width:100%">
+  <img class="mySlides" src="../images/slide/image33.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left " onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+ <br><br><br>
+	  <center> 	
+		<img src="../images/image1.jpg" class="img2"><br>
+        <img src="../images/image2.jpg" class="img2"><br>
+        <img src="../images/image4.jpg" class="img2"><br>
+        </center>
+		<a class="footer" href="../index.html">retour vers page principale</a>
+		
+		
+		
+		
+    </body>
+</html>
